@@ -16,31 +16,41 @@
         <img src="http://img63.ddimg.cn/2021/6/30/2021063015233889295.jpg" alt="">
     </div>
     <ul class="local-nav">
-
     </ul>
-
-    <script>
-        const list = [
-            "http://img63.ddimg.cn/upload_img/00803/1/1zongbang-1581651177.jpg",
-            "http://img61.ddimg.cn/upload_img/00803/1/2xinshubang-1581652204.jpg",
-            "http://img61.ddimg.cn/upload_img/00796/1/3tongshubang-1581652370.jpg",
-            "http://img62.ddimg.cn/upload_img/00796/1/4jiaofubang-1581652439.jpg",
-            "http://img61.ddimg.cn/upload_img/00796/1/9dujiategong-1581921679.jpg",
-            "http://img60.ddimg.cn/upload_img/00803/1/mingjiazhibo-1581926953.jpg",
-            "http://img61.ddimg.cn/upload_img/00803/1/xinshuqiangxiandu-1602655897.png",
-            "http://img61.ddimg.cn/upload_img/00766/dangdang/wujie-1606809051.png",
-            "http://img60.ddimg.cn/upload_img/00796/1/teseshuguan-1611545631.png",
-            "http://img60.ddimg.cn/upload_img/00803/1/10-1592391980.jpg"
-        ]
-        let localNav = document.querySelector('.local-nav');
-        list.forEach(item => {
-            let listLi = document.createElement('li');
-            let listImg = document.createElement('img');
-            localNav.appendChild(listLi);
-            listImg.src = item;
-            listLi.appendChild(listImg);
-        })
-    </script>
+    <div class="hot">
+        <img src="./img//hot.png" alt="">
+        <span>热销图书</span>
+    </div>
+    <ul class="commodity">
+    </ul>
+    <ul class="tabbar">
+        <li>
+            <div>
+                <img src="./img//icon_book_selected.png" alt="">
+                <span>首页</span>
+            </div>
+        </li>
+        <li>
+            <div>
+                <img src="./img//icon_sort_noselected.png" alt="">
+                <span>分类</span>
+            </div>
+        </li>
+        <li>
+            <div>
+                <img src="./img//icon_car_noselected.png" alt="">
+                <span>购物车</span>
+            </div>
+        </li>
+        <li>
+            <div>
+                <img src="./img//icon_mine_noselected.png" alt="">
+                <span>我的</span>
+            </div>
+        </li>
+    </ul>
+    <script src="./js/data.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 
 </html>
