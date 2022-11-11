@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/common.css">
     <title>Document</title>
 
 </head>
@@ -24,25 +25,25 @@
     <ul class="commodity">
     </ul>
     <ul class="tabbar">
-        <li>
+        <li class="index">
             <div>
                 <img src="./img//icon_book_selected.png" alt="">
                 <span>首页</span>
             </div>
         </li>
-        <li>
+        <li class="sort">
             <div>
                 <img src="./img//icon_sort_noselected.png" alt="">
                 <span>分类</span>
             </div>
         </li>
-        <li>
+        <li class="car">
             <div>
                 <img src="./img//icon_car_noselected.png" alt="">
                 <span>购物车</span>
             </div>
         </li>
-        <li>
+        <li class="mine">
             <div>
                 <img src="./img//icon_mine_noselected.png" alt="">
                 <span>我的</span>
@@ -51,6 +52,18 @@
     </ul>
     <script src="./js/data.js"></script>
     <script src="./js/index.js"></script>
+    <script src="./js/tabbar.js"></script>
+    <script>
+        sort.addEventListener('click', () => {
+            location.href = 'view/sort.html'
+        })
+        car.addEventListener('click', () => {
+            location.href = 'view/car.html'
+        })
+        mine.addEventListener('click', () => {
+            location.href = 'view/mine.html'
+        })
+    </script>
 </body>
 
 </html>

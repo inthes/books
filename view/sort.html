@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/sort.css">
+</head>
+
+<body>
+    <div class="nav">
+        <ul>
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <div class="specific">
+
+    </div>
+
+    <ul class="tabbar">
+        <li class="index">
+            <div>
+
+                <img src="../img//icon_book_noselected.png" alt="">
+                <span>首页</span>
+            </div>
+        </li>
+        <li class="sort">
+            <div>
+                <img src="../img//icon_sort_selected.png" alt="">
+                <span>分类</span>
+            </div>
+        </li>
+        <li class="car">
+            <div>
+                <img src="../img//icon_car_noselected.png" alt="">
+                <span>购物车</span>
+            </div>
+        </li>
+        <li class="mine">
+            <div>
+                <img src="../img//icon_mine_noselected.png" alt="">
+                <span>我的</span>
+            </div>
+        </li>
+    </ul>
+    <script src="../js/tabbar.js"></script>
+    <script src="../js/sort.js"></script>
+    <!-- <script src="../js/common.js"></script> -->
+    <script src="../js/data.js"></script>
+    <script>
+        //跳转至其他页面（tabbar）
+        index.addEventListener('click', () => {
+            location.href = '../index.html'
+        })
+        car.addEventListener('click', () => {
+            location.href = 'car.html'
+        })
+        mine.addEventListener('click', () => {
+            location.href = 'mine.html'
+        })
+        //增加分类栏元素
+        const liAll = document.querySelector('.nav').querySelectorAll('li');
+        for (let i = 0; i < liAll.length; i++) {
+            liAll[i].innerHTML = books[i].sortName;
+        }
+        const specific = document.querySelector('.specific');
+        for (let i = 0; i < books.length; i++) {
+            //增加分类图书
+            const specificImg = document.createElement('img');
+            specificImg.src = books[i].thumbSrc;
+            specific.appendChild(specificImg);
+
+        }
+        //分类图片跳转加购详情页
+        const imgAll = specific.querySelectorAll('img');
+        imgAll[0].addEventListener('click', function () {
+            location.href = '../detail/alphabet.html'
+        })
+        
+        for (let i = 0; i < liAll.length; i++) {
+            //增加点击事件，判断是否为该分类，从而进行显示
+            liAll[i].addEventListener('click', () => {
+                for (let j = 0; j < liAll.length; j++) {
+                    liAll[j].className = '';
+                }
+                liAll[i].className = 'active'
+                for (let s = 0; s < liAll.length; s++) {
+                    specific.children[s].style.display = 'none'
+                }
+                if (liAll[i].className === 'active') {
+                    for (let j = 0; j < books.length; j++) {
+                        if (liAll[i].innerHTML === books[j].sortName) {
+                            specific.children[j].style.display = 'block'
+                        }
+                    }
+                }
+            })
+
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

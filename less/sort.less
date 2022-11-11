@@ -1,0 +1,36 @@
+.nav {
+    width: 100px;
+    background-color: #fff;
+    height: 1000px;
+    position: absolute;
+
+    li {
+        height: 70px;
+        text-align: center;
+        line-height: 70px;
+    }
+}
+
+.active {
+    background-color: #f7f8fa;
+}
+
+.specific {
+    position: absolute;
+    left: 110px;
+    // height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+
+    // background-color: pink;
+    img {
+        width: 125px;
+
+        flex: 50%;
+        display: none;
+    }
+}
+
+.specific img:first-child {
+    display: block;
+}

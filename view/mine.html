@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/mine.css">
+</head>
+
+<body>
+    <div class="photo">
+        <img src="../img/touxiang.jpg" alt="">
+        <span>suga</span>
+    </div>
+    <ul class="message">
+        <li>我的订单</li>
+        <li>待发货</li>
+        <li>待收货</li>
+        <li>地址管理</li>
+        <li>联系客服</li>
+    </ul>
+    <ul class="tabbar">
+        <li class="index">
+            <div>
+
+                <img src="../img//icon_book_noselected.png" alt="">
+                <span>首页</span>
+            </div>
+        </li>
+        <li class="sort">
+            <div>
+                <img src="../img//icon_sort_noselected.png" alt="">
+                <span>分类</span>
+            </div>
+        </li>
+        <li class="car">
+            <div>
+                <img src="../img//icon_car_noselected.png" alt="">
+                <span>购物车</span>
+            </div>
+        </li>
+        <li class="mine">
+            <div>
+                <img src="../img//icon_mine_selected.png" alt="">
+                <span>我的</span>
+            </div>
+        </li>
+    </ul>
+    <script src="../js//tabbar.js"></script>
+    <script>
+        index.addEventListener('click', () => {
+            location.href = '../index.html'
+        })
+        sort.addEventListener('click', () => {
+            location.href = 'sort.html'
+        })
+        car.addEventListener('click', () => {
+            location.href = 'car.html'
+        })
+
+    </script>
+</body>
+
+</html>

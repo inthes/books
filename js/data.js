@@ -1,5 +1,5 @@
 // 轮播图数据
-const swiperImgs= [
+const swiperImgs = [
     "http://img63.ddimg.cn/2021/6/30/2021063015233889295.jpg",
     "http://img62.ddimg.cn/2021/6/30/2021063015214779018.jpg",
     "http://img63.ddimg.cn/2021/6/30/2021063015222033855.jpg"
@@ -31,7 +31,7 @@ const books = [{
 },
 {
     id: 2,
-    sortName: "童书类",
+    sortName: "童书",
     bookName: "童立方·科学在闪耀",
     originalPrice: 106.00,
     presentPrice: 89.00,
@@ -53,7 +53,7 @@ const books = [{
 },
 {
     id: 4,
-    sortName: "人文社科类",
+    sortName: "人文社科",
     bookName: "蛤蟆先生去看心理医生",
     originalPrice: 38.00,
     presentPrice: 19.00,

@@ -30,3 +30,6 @@ books.forEach(item => {
     commodityLi.appendChild(commodityMessage)
     commodity.appendChild(commodityLi);
 })
+commodity.children[0].addEventListener('click', () => {
+    location.href = 'detail/alphabet.html'
+})

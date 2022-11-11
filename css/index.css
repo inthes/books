@@ -1,29 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-    cursor: help;
-
-}
-
-li {
-    list-style: none
-}
-
-img {
-    vertical-align: top;
-    border: none
-}
-
-body {
-    max-width: 540px;
-    min-width: 320px;
-    margin: 0 auto;
-    font: normal 14px/1.5 Tahoma, "Lucida Grande", Verdana, "Microsoft Yahei", STXihei, hei;
-    color: #000;
-    background: #f2f2f2;
-    overflow-x: hidden;
-    -webkit-tap-highlight-color: transparent;
-}
 
 li {
     list-style: none;
@@ -128,27 +102,3 @@ li {
     margin-left: 10px;
 }
 
-.tabbar {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 70px;
-    border-top: 1px solid #ccc;
-    font-size: 12px;
-    text-align: center;
-    background-color: #ffffff;
-}
-
-.tabbar div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: #8b8b8b;
-}
-
-.tabbar img {
-    width: 40px;
-}
